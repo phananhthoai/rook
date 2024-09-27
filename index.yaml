@@ -1,0 +1,47 @@
+apiVersion: v1
+entries:
+  library:
+  - apiVersion: v2
+    created: "2024-09-27T07:32:50.296464556Z"
+    description: A simple library chart to share content between Rook's charts
+    digest: cadddaa08920c2aca4c9b320c68b223e795f0aec3942c4523c4f69114313245e
+    name: library
+    type: library
+    urls:
+    - library-0.0.1.tgz
+    version: 0.0.1
+  rook-ceph:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-09-27T07:32:50.306916475Z"
+    dependencies:
+    - name: library
+      repository: file://../library
+      version: 0.0.1
+    description: File, Block, and Object Storage Services for your Cloud-Native Environment
+    digest: 05d3af5d4d408a47b5810ca2236a4c6d8454b0b98be3b982c3596c3e955ef290
+    icon: https://rook.io/images/rook-logo.svg
+    name: rook-ceph
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - rook-ceph-0.0.1.tgz
+    version: 0.0.1
+  rook-ceph-cluster:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-09-27T07:32:50.310058696Z"
+    dependencies:
+    - name: library
+      repository: file://../library
+      version: 0.0.1
+    description: Manages a single Ceph cluster namespace for Rook
+    digest: 51aa949a7578f14f74fd515c7152ef5aa972bb1bb99b30ccef407089ee138376
+    icon: https://rook.io/images/rook-logo.svg
+    name: rook-ceph-cluster
+    sources:
+    - https://github.com/rook/rook
+    urls:
+    - rook-ceph-cluster-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-09-27T07:32:50.295723164Z"
